@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Task Manager</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1>Task Manager</h1>
+      
+    </header>
+
+    <form id="task-form">
+      <input
+        id="task-title"
+        type="text"
+        placeholder="Add your task..."
+        aria-label="Task title"
+        maxlength="200"
+        required
+      >
+
+      <button id="add-button" type="submit">
+        Add Task
+      </button>
+    </form>
+
+    <section class="filters">
+      <label for="status-filter">Filter by status:</label>
+
+      <select id="status-filter">
+        <option value="all">All Tasks</option>
+        <option value="active">Active</option>
+        <option value="completed">Completed</option>
+      </select>
+    </section>
+
+    <p id="message" role="status" aria-live="polite"></p>
+
+    <section>
+      <h2>Your Tasks</h2>
+      <ul id="task-list"></ul>
+    </section>
+  </main>
+</body>
+</html>
